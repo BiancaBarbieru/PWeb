@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:alpine3.19
+    environment:
+      POSTGRES_USER: bibi
+      POSTGRES_PASSWORD: bibi
+      POSTGRES_DB: database
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_volume:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: biancabarbieru401@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: bibi
+    ports:
+      - "5050:80"
