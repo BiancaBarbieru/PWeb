@@ -3,11 +3,13 @@ package com.pweb.fashionswap.controller;
 import com.pweb.fashionswap.entities.Product;
 import com.pweb.fashionswap.entities.dto.ProductDTO;
 import com.pweb.fashionswap.service.ProductService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@SecurityRequirement(name = "bearerAuth")
 public class ProductController {
     private ProductService productService;
 

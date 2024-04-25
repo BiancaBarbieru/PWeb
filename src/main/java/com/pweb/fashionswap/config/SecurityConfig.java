@@ -55,11 +55,6 @@ public class SecurityConfig {
     }
 
 
-    //requestMatchers( "/addresses/**", "/reviews/**", "/products/**", "/users/**", "/order/**")
-    //                                .permitAll()
-    //                                .anyRequest()
-    //                                .authenticated()
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

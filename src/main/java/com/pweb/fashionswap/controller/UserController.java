@@ -2,12 +2,14 @@ package com.pweb.fashionswap.controller;
 
 import com.pweb.fashionswap.entities.User;
 import com.pweb.fashionswap.service.UserService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 
 @RestController
+@SecurityRequirement(name = "bearerAuth")
 public class UserController {
     private UserService userService;
 

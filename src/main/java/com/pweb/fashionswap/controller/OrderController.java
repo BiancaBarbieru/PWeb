@@ -2,9 +2,11 @@ package com.pweb.fashionswap.controller;
 
 import com.pweb.fashionswap.entities.Order;
 import com.pweb.fashionswap.service.OrderService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@SecurityRequirement(name = "bearerAuth")
 public class OrderController {
     private OrderService orderService;
 
